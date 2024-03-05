@@ -1,0 +1,46 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "command": "-extension.vim_cmd+c",
+    "key": "cmd+c",
+    "when": "editorTextFocus && vim.active && vim.overrideCopy && vim.use<D-c> && !inDebugRepl"
+  },
+  {
+    "command": "projectManager.listGitProjects#sideBarGit",
+    "key": "cmd+o"
+  },
+  {
+    "command": "explorer.newFile",
+    "key": "a",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "command": "renameFile",
+    "key": "r",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "command": "filesExplorer.copy",
+    "key": "c",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "command": "filesExplorer.paste",
+    "key": "p",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "command": "deleteFile",
+    "key": "d",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "command": "workbench.action.toggleSidebarVisibility",
+    "key": "cmd+e"
+  },
+  {
+    "command": "workbench.files.action.focusFilesExplorer",
+    "key": "cmd+e",
+    "when": "editorTextFocus"
+  }
+]

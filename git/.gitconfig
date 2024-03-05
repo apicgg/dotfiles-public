@@ -1,0 +1,45 @@
+[user]
+	email = p.anurag@outlook.com
+	name = Anurag Pramanik
+[gpg]
+	program = /opt/homebrew/bin/gpg
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
+[init]
+	defaultBranch = main
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = code --wait
+[push]
+  default = simple
+[github]
+  user = apicgg
+[color]
+  status = auto
+  diff = auto
+  branch = auto
+  interactive = auto
+  grep = auto
+  ui = auto
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+  ps = push
+  pl = pull
+  d = diff
+  df = diff -b --color-words
+  dfw = diff -w
+  br = branch
+  ba = branch -a
+  lg = log --graph --name-status --pretty=format:\"%C(red)%h %C(reset)(%cd) %C(green)%an %Creset%s %C(yellow)%d%Creset\" --date=relative
+  open = "!hub browse"
+[hub]
+	protocol = ssh
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
