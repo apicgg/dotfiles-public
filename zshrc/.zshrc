@@ -129,8 +129,8 @@ export PATH="$PATH:$HOME/FlutterSDK/flutter/bin"
 alias dd="cd ~/Developer"
 alias c="clear"
 alias ls="eza"
-alias ll="eza -l"
-alias la="eza -la"
+alias ll="eza -l -g --icons"
+alias la="ll -a"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
