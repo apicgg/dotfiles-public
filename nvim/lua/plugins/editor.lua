@@ -74,7 +74,6 @@ return {
           builtin.find_files({
             no_ignore = false,
             hidden = true,
-            find_command = { "rg", "--files", "--iglob", "!.git", "--hidden" },
           })
         end,
         desc = "Lists files in your current working directory, respects .gitignore",
