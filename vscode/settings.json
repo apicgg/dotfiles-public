@@ -78,7 +78,8 @@
   "terminal.integrated.fontSize": 15,
   "terminal.integrated.macOptionClickForcesSelection": true,
   "vim.foldfix": true,
-  "vim.highlightedyank.color": "rgba(230, 97, 89, 0.7)",
+  // "vim.highlightedyank.color": "rgba(230, 97, 89, 0.7)",
+  "vim.highlightedyank.color": "#a9dc7660",
   "vim.highlightedyank.enable": true,
   "vim.highlightedyank.textColor": "white",
   "vim.hlsearch": true,
@@ -124,15 +125,22 @@
       "commands": [":nohl"]
     },
     {
-      "after": ["\"", "*", "y"],
-      "before": ["y"],
-      "recursive": false
+      "before": ["leader", "f", "f"],
+      "commands": ["find-it-faster.findFiles"]
+    },
+    {
+      "before": ["leader", "f", "r"],
+      "commands": ["find-it-faster.findWithinFiles"]
+    },
+    {
+      "before": ["leader", "z"],
+      "commands": ["workbench.action.toggleZenMode"]
     }
   ],
-  "window.commandCenter": false,
+  "vim.smartRelativeLine": true,
+  "vim.useSystemClipboard": true,
   "window.confirmBeforeClose": "keyboardOnly",
   "window.zoomLevel": 1,
-  "workbench.colorTheme": "Gruvbox Dark Hard",
   "workbench.iconTheme": "vscode-icons",
   "workbench.layoutControl.enabled": false,
   "workbench.list.smoothScrolling": true,
