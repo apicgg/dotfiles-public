@@ -98,9 +98,6 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # Flutter
 export PATH="$PATH:$HOME/FlutterSDK/flutter/bin"
 
-# z
-. $HOMEBREW_PREFIX/etc/profile.d/z.sh
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -138,3 +135,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# zoxide
+eval "$(zoxide init zsh)"
