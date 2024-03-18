@@ -36,8 +36,6 @@ keymap.set("n", "dw", 'vb"_d')
 keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x>")
 
--- delete single character without copying into register
-keymap.set("n", "x", '"_x')
 
 -- delete word backward without copying into register
 keymap.set("n", "db", "vbd")
