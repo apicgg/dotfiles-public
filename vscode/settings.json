@@ -78,8 +78,7 @@
   "terminal.integrated.fontSize": 15,
   "terminal.integrated.macOptionClickForcesSelection": true,
   "vim.foldfix": true,
-  // "vim.highlightedyank.color": "rgba(230, 97, 89, 0.7)",
-  "vim.highlightedyank.color": "#a9dc7660",
+  "vim.highlightedyank.color": "rgba(230, 97, 89, 0.7)",
   "vim.highlightedyank.enable": true,
   "vim.highlightedyank.textColor": "white",
   "vim.hlsearch": true,
@@ -90,7 +89,6 @@
       "before": ["j", "j"]
     }
   ],
-  "vim.leader": "<space>",
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["[", "d"],
@@ -105,39 +103,14 @@
       "commands": ["editor.action.showHover"]
     },
     {
-      "before": ["leader", "g", "b"],
-      "commands": ["gitlens.toggleFileBlame"]
-    },
-    {
-      "before": ["leader", "g", "o"],
-      "commands": ["gitlens.openRepoOnRemote"]
-    },
-    {
       "after": ["^"],
       "before": ["H"]
     },
     {
       "after": ["$"],
       "before": ["L"]
-    },
-    {
-      "before": ["leader", "n", "h"],
-      "commands": [":nohl"]
-    },
-    {
-      "before": ["leader", "f", "f"],
-      "commands": ["find-it-faster.findFiles"]
-    },
-    {
-      "before": ["leader", "f", "r"],
-      "commands": ["find-it-faster.findWithinFiles"]
-    },
-    {
-      "before": ["leader", "z"],
-      "commands": ["workbench.action.toggleZenMode"]
     }
   ],
-  "vim.smartRelativeLine": true,
   "vim.useSystemClipboard": true,
   "window.confirmBeforeClose": "keyboardOnly",
   "window.zoomLevel": 1,
