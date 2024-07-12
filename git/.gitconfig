@@ -11,9 +11,11 @@
 	defaultBranch = main
 [core]
 	excludesfile = ~/.gitignore_global
-	editor = code --wait
+  editor = code --wait
 [push]
   default = simple
+[pull]
+  ff = only
 [github]
   user = apicgg
 [color]
@@ -29,12 +31,14 @@
   co = checkout
   ps = push
   pl = pull
+  pr = pull --rebase
   d = diff
   df = diff -b --color-words
   dfw = diff -w
   br = branch
   ba = branch -a
   lg = log --graph --name-status --pretty=format:\"%C(red)%h %C(reset)(%cd) %C(green)%an %Creset%s %C(yellow)%d%Creset\" --date=relative
+  fl = log --pretty=full --stat
   open = "!hub browse"
 [hub]
 	protocol = ssh
