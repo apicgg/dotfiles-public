@@ -1,0 +1,63 @@
+[user]
+	email = p.anurag@outlook.com
+	name = Anurag Pramanik
+[gpg]
+	program = /opt/homebrew/bin/gpg
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
+[init]
+	defaultBranch = main
+[core]
+  excludesfile = ~/.gitignore_global
+  editor = nvim
+[push]
+  default = simple
+[pull]
+  ff = only
+[github]
+  user = apicgg
+[color]
+  status = auto
+  diff = auto
+  branch = auto
+  interactive = auto
+  grep = auto
+  ui = auto
+[alias]
+  cl = clone
+  st = status
+  cm = commit
+  cma = commit -a
+  co = checkout
+  cob = checkout -b
+  ps = push
+  pl = pull
+  pr = pull --rebase
+  d = diff
+  df = diff -b --color-words
+  dfw = diff -w
+  dfs = diff -w --staged
+  br = branch
+  ba = branch -a
+  lg = log --graph --name-status --pretty=format:\"%C(red)%h %C(reset)(%cd) %C(green)%an %Creset%s %C(yellow)%d%Creset\" --date=relative
+  fl = log --pretty=full --stat
+  open = "!hub browse"
+[hub]
+	protocol = ssh
+[github]
+  user = apicgg
+[diff]
+  tool = nvimdiff
+[difftool "nvimdiff"]
+	cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
+  path = 
+[mergetool "nvimdiff"]
+	cmd = nvim -d \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
