@@ -30,6 +30,7 @@ vim.opt.splitbelow = true -- Put new windows below current
 vim.opt.splitright = true -- Put new windows right of current
 vim.opt.splitkeep = "cursor"
 vim.opt.signcolumn = "yes" -- show sign column so that text doesn't shift
+vim.opt.list = false -- make trailing spaces invisible
 
 -- Spell check
 -- vim.opt.spell = true

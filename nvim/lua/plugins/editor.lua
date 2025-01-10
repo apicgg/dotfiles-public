@@ -226,4 +226,14 @@ return {
       },
     },
   },
+
+  -- Multiline editing
+  {
+    "mg979/vim-visual-multi",
+  },
+
+  -- SVG preview
+  {
+    "dcorral/svgpreview-vim",
+  },
 }

@@ -1,3 +1,7 @@
+if true then
+  return {}
+end
+
 return {
   {
     "craftzdog/solarized-osaka.nvim",
