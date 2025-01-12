@@ -56,6 +56,10 @@ keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" }) 
 keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" }) -- make split windows equal width & height
 keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" }) -- close current split window
 
+-- neovim-project
+keymap.set("n", "<leader>pd", ":NeovimProjectDiscover<CR>", { desc = "Find a project based on patterns" })
+keymap.set("n", "<leader>ph", ":NeovimProjectHistory<CR>", { desc = "Select a project from your recent history" })
+
 -- Diagnostics
 keymap.set("n", "<C-j>", function()
   vim.diagnostic.goto_next()

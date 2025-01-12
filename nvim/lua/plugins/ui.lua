@@ -89,11 +89,11 @@ return {
   -- filename
   -- {
   --   "b0o/incline.nvim",
-  --   dependencies = { "craftzdog/solarized-osaka.nvim" },
+  --   dependencies = { "folke/tokyonight.nvim" },
   --   event = "BufReadPre",
   --   priority = 1200,
   --   config = function()
-  --     local colors = require("solarized-osaka.colors").setup()
+  --     local colors = require("tokyonight.colors.moon")
   --     require("incline").setup({
   --       highlight = {
   --         groups = {
@@ -156,15 +156,12 @@ return {
       dashboard = {
         preset = {
           header = [[
-	        
- █████╗ ██████╗ ██╗ ██████╗ ██████╗  ██████╗ 
-██╔══██╗██╔══██╗██║██╔════╝██╔════╝ ██╔════╝ 
-███████║██████╔╝██║██║     ██║  ███╗██║  ███╗
-██╔══██║██╔═══╝ ██║██║     ██║   ██║██║   ██║
-██║  ██║██║     ██║╚██████╗╚██████╔╝╚██████╔╝
-╚═╝  ╚═╝╚═╝     ╚═╝ ╚═════╝ ╚═════╝  ╚═════╝ 
-                                             
-
+███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
+████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║
+██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║
+██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
+██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
+╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
    ]],
         },
       },
