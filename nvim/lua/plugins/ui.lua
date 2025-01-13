@@ -87,36 +87,41 @@ return {
   -- },
 
   -- filename
-  -- {
-  --   "b0o/incline.nvim",
-  --   dependencies = { "folke/tokyonight.nvim" },
-  --   event = "BufReadPre",
-  --   priority = 1200,
-  --   config = function()
-  --     local colors = require("tokyonight.colors.moon")
-  --     require("incline").setup({
-  --       highlight = {
-  --         groups = {
-  --           InclineNormal = { guibg = colors.magenta500, guifg = colors.base04 },
-  --           InclineNormalNC = { guifg = colors.violet500, guibg = colors.base03 },
-  --         },
-  --       },
-  --       window = { margin = { vertical = 0, horizontal = 1 } },
-  --       hide = {
-  --         cursorline = true,
-  --       },
-  --       render = function(props)
-  --         local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(props.buf), ":t")
-  --         if vim.bo[props.buf].modified then
-  --           filename = "[+] " .. filename
-  --         end
-  --
-  --         local icon, color = require("nvim-web-devicons").get_icon_color(filename)
-  --         return { { icon, guifg = color }, { " " }, { filename } }
-  --       end,
-  --     })
-  --   end,
-  -- },
+  {
+    "b0o/incline.nvim",
+    dependencies = { "folke/tokyonight.nvim" },
+    event = "BufReadPre",
+    priority = 1200,
+    config = function()
+      local colors = require("tokyonight.colors.moon")
+      local helpers = require("incline.helpers")
+      local devicons = require("nvim-web-devicons")
+      require("incline").setup({
+        window = {
+          padding = 0,
+          margin = { horizontal = 0 },
+        },
+        hide = {
+          cursorline = true,
+        },
+        render = function(props)
+          local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(props.buf), ":t")
+          if filename == "" then
+            filename = "[No Name]"
+          end
+          local ft_icon, ft_color = devicons.get_icon_color(filename)
+          local modified = vim.bo[props.buf].modified
+          return {
+            ft_icon and { " ", ft_icon, " ", guibg = ft_color, guifg = helpers.contrast_color(ft_color) } or "",
+            " ",
+            { filename, gui = modified and "bold,italic" or "bold" },
+            " ",
+            guibg = "#44406e",
+          }
+        end,
+      })
+    end,
+  },
 
   -- statusline
   {
