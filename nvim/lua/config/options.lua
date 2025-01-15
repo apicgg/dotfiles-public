@@ -33,8 +33,8 @@ vim.opt.signcolumn = "yes" -- show sign column so that text doesn't shift
 vim.opt.list = false -- make trailing spaces invisible
 
 -- Spell check
--- vim.opt.spell = true
--- vim.opt.spelllang = { "en_us" }
+vim.opt.spell = true
+vim.opt.spelllang = { "en_us" }
 
 -- clipboard
 vim.opt.clipboard:append("unnamedplus") -- use system clipboard as default register
