@@ -36,6 +36,9 @@ vim.opt.list = false -- make trailing spaces invisible
 vim.opt.spell = true
 vim.opt.spelllang = { "en_us" }
 
+-- Better session with auto-session
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+
 -- clipboard
 vim.opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 

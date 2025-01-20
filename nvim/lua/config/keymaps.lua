@@ -62,6 +62,10 @@ keymap.set("n", "<C-w><right>", "<C-w>>")
 keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
+-- Session
+keymap.set("n", "<leader>wr", "<cmd>SessionRestore<CR>", { desc = "Restore session for cwd" })
+keymap.set("n", "<leader>ws", "<cmd>SessionSave<CR>", { desc = "Save workspace session for current working directory" })
+
 -- Diagnostics
 -- keymap.set("n", "<C-j>", function()
 --   vim.diagnostic.goto_next()
@@ -69,8 +73,8 @@ keymap.set("n", "<C-w><down>", "<C-w>-")
 
 keymap.set("n", "<leader>r", function()
   require("anurag.hsl").replaceHexWithHSL()
-end)
+end, { desc = "Replace Hex with HSL" })
 
 keymap.set("n", "<leader>i", function()
   require("anurag.lsp").toggleInlayHints()
-end)
+end, { desc = "Toogle Inlay Hints" })
