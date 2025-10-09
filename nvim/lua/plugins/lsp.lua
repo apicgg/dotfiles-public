@@ -1,17 +1,18 @@
 return {
   -- tools
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
         "stylua",
         "selene",
         "luacheck",
-        "shellcheck",
+        -- "shellcheck",
         "shfmt",
         "tailwindcss-language-server",
         "typescript-language-server",
         "css-lsp",
+        "typos-lsp",
       })
     end,
   },
@@ -144,7 +145,7 @@ return {
         {
           "gd",
           function()
-            -- DO NOT RESUSE WINDOW
+            -- DO NOT REUSE WINDOW
             require("telescope.builtin").lsp_definitions({ reuse_win = false })
           end,
           desc = "Goto Definition",

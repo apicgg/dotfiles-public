@@ -32,4 +32,3 @@ alias c='clear'
 alias pd='cd /c/projects/'
 alias g='git'
 alias ..='cd ../'
-

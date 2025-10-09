@@ -1,3 +1,7 @@
+-- Options are automatically loaded before lazy.nvim startup
+-- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
+-- Add any additional options here
+
 vim.g.mapleader = " "
 
 vim.opt.encoding = "utf-8"
@@ -31,13 +35,20 @@ vim.opt.splitright = true -- Put new windows right of current
 vim.opt.splitkeep = "cursor"
 vim.opt.signcolumn = "yes" -- show sign column so that text doesn't shift
 vim.opt.list = false -- make trailing spaces invisible
+vim.opt.pumblend = 0
+vim.opt.termguicolors = true
+vim.opt.background = "dark" -- colorschemes that can be light or dark will be made dark
+
+-- split windows
+vim.opt.splitright = true -- split vertical window to the right
+vim.opt.splitbelow = true -- split horizontal window to the bottom
 
 -- Spell check
-vim.opt.spell = true
-vim.opt.spelllang = { "en_us" }
+-- vim.opt.spell = true
+-- vim.opt.spelllang = { "en_us" }
 
 -- Better session with auto-session
-vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+-- vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 -- clipboard
 vim.opt.clipboard:append("unnamedplus") -- use system clipboard as default register
@@ -55,3 +66,24 @@ vim.cmd([[au BufNewFile,BufRead Podfile setf ruby]])
 if vim.fn.has("nvim-0.8") == 1 then
   vim.opt.cmdheight = 0
 end
+
+-- File types
+vim.filetype.add({
+  extension = {
+    mdx = "mdx",
+  },
+})
+
+vim.g.lazyvim_prettier_needs_config = true
+vim.g.lazyvim_picker = "telescope"
+vim.g.lazyvim_cmp = "blink.cmp"
+
+-- Rounded border for diagnostic
+vim.diagnostic.config({
+  virtual_text = false,
+  float = {
+    header = false,
+    border = "rounded",
+    focusable = true,
+  },
+})

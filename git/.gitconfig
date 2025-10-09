@@ -33,6 +33,7 @@
   co = checkout
   cob = checkout -b
   ps = push
+  pnb = "!git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)"
   pl = pull
   pr = pull --rebase
   d = diff
@@ -41,18 +42,14 @@
   dfs = diff -w --staged
   br = branch
   ba = branch -a
+  l = log
   lg = log --graph --name-status --pretty=format:\"%C(red)%h %C(reset)(%cd) %C(green)%an %Creset%s %C(yellow)%d%Creset\" --date=relative
   fl = log --pretty=full --stat
-  open = "!hub browse"
-[hub]
-	protocol = ssh
-[github]
-  user = apicgg
 [diff]
   tool = nvimdiff
 [difftool "nvimdiff"]
 	cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
-  path = 
+	path = 
 [mergetool "nvimdiff"]
 	cmd = nvim -d \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true

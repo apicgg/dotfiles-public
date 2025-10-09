@@ -13,25 +13,41 @@ return {
     },
   },
 
+  -- {
+  --   "nvim-mini/mini.hipatterns",
+  --   event = "BufReadPre",
+  --   opts = {
+  --     highlighters = {
+  --       hsl_color = {
+  --         pattern = "hsl%(%d+,? %d+%%?,? %d+%%?%)",
+  --         group = function(_, match)
+  --           local utils = require("solarized-osaka.hsl")
+  --           --- @type string, string, string
+  --           local nh, ns, nl = match:match("hsl%((%d+),? (%d+)%%?,? (%d+)%%?%)")
+  --           --- @type number?, number?, number?
+  --           local h, s, l = tonumber(nh), tonumber(ns), tonumber(nl)
+  --           --- @type string
+  --           local hex_color = utils.hslToHex(h, s, l)
+  --           return MiniHipatterns.compute_hex_color_group(hex_color, "bg")
+  --         end,
+  --       },
+  --     },
+  --   },
+  -- },
+
   {
-    "echasnovski/mini.hipatterns",
+    "brenoprata10/nvim-highlight-colors",
     event = "BufReadPre",
     opts = {
-      highlighters = {
-        hsl_color = {
-          pattern = "hsl%(%d+,? %d+%%?,? %d+%%?%)",
-          group = function(_, match)
-            local utils = require("solarized-osaka.hsl")
-            --- @type string, string, string
-            local nh, ns, nl = match:match("hsl%((%d+),? (%d+)%%?,? (%d+)%%?%)")
-            --- @type number?, number?, number?
-            local h, s, l = tonumber(nh), tonumber(ns), tonumber(nl)
-            --- @type string
-            local hex_color = utils.hslToHex(h, s, l)
-            return MiniHipatterns.compute_hex_color_group(hex_color, "bg")
-          end,
-        },
-      },
+      render = "background",
+      enable_hex = true,
+      enable_short_hex = true,
+      enable_rgb = true,
+      enable_hsl = true,
+      enable_hsl_without_function = true,
+      enable_ansi = true,
+      enable_var_usage = true,
+      enable_tailwind = true,
     },
   },
 
@@ -68,22 +84,24 @@ return {
         desc = "Find Plugin File",
       },
       {
-        ";f",
+        "<leader>ff",
         function()
           local builtin = require("telescope.builtin")
           builtin.find_files({
-            no_ignore = false,
+            no_ignore = true,
             hidden = true,
+            file_ignore_patterns = { ".git", "node_modules", ".DS_Store" },
           })
         end,
         desc = "Lists files in your current working directory, respects .gitignore",
       },
       {
-        ";r",
+        "<leader>fs",
         function()
           local builtin = require("telescope.builtin")
           builtin.live_grep({
             additional_args = { "--hidden" },
+            file_ignore_patterns = { ".git", "node_modules", ".DS_Store" },
           })
         end,
         desc = "Search for a string in your current working directory and get results live as you type, respects .gitignore",
@@ -97,7 +115,7 @@ return {
         desc = "Lists open buffers",
       },
       {
-        ";t",
+        "<leader>fh",
         function()
           local builtin = require("telescope.builtin")
           builtin.help_tags()
@@ -105,7 +123,7 @@ return {
         desc = "Lists available help tags and opens a new window with the relevant help info on <cr>",
       },
       {
-        ";;",
+        "<leader>fr",
         function()
           local builtin = require("telescope.builtin")
           builtin.resume()
@@ -113,21 +131,21 @@ return {
         desc = "Resume the previous telescope picker",
       },
       {
-        ";e",
+        "<leader>fd",
         function()
           local builtin = require("telescope.builtin")
           builtin.diagnostics()
         end,
         desc = "Lists Diagnostics for all open buffers or a specific buffer",
       },
-      {
-        ";s",
-        function()
-          local builtin = require("telescope.builtin")
-          builtin.treesitter()
-        end,
-        desc = "Lists Function names, variables, from Treesitter",
-      },
+      -- {
+      --   ";s",
+      --   function()
+      --     local builtin = require("telescope.builtin")
+      --     builtin.treesitter()
+      --   end,
+      --   desc = "Lists Function names, variables, from Treesitter",
+      -- },
       {
         "<leader>sf",
         function()
@@ -235,5 +253,10 @@ return {
   -- SVG preview
   {
     "dcorral/svgpreview-vim",
+  },
+
+  -- Vim fugitive
+  {
+    "tpope/vim-fugitive",
   },
 }
