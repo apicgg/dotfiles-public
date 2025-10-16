@@ -64,11 +64,25 @@ return {
     },
   },
 
+  -- {
+  --   "nvim-cmp",
+  --   dependencies = { "hrsh7th/cmp-emoji" },
+  --   opts = function(_, opts)
+  --     table.insert(opts.sources, { name = "emoji" })
+  --   end,
+  -- },
   {
-    "nvim-cmp",
-    dependencies = { "hrsh7th/cmp-emoji" },
-    opts = function(_, opts)
-      table.insert(opts.sources, { name = "emoji" })
-    end,
+    "nvim-mini/mini.surround",
+    opts = {
+      mappings = {
+        add = "gsa",
+        delete = "gsd",
+        find = "gsf",
+        find_left = "gsF",
+        highlight = "gsh",
+        replace = "gsr",
+        update_n_lines = "gsn",
+      },
+    },
   },
 }

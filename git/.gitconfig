@@ -1,5 +1,5 @@
 [user]
-	email = p.anurag@outlook.com
+  email = p.anurag@outlook.com
 	name = Anurag Pramanik
 [gpg]
 	program = /opt/homebrew/bin/gpg
@@ -11,11 +11,10 @@
 	defaultBranch = main
 [core]
   excludesfile = ~/.gitignore_global
+  # editor = code --wait
   editor = nvim
 [push]
   default = simple
-[pull]
-  ff = only
 [github]
   user = apicgg
 [color]
