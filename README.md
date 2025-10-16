@@ -1,11 +1,23 @@
-# Anurag's dotfiles
+# Anurag's Dotfiles
 
-**Warning**: Don’t blindly use my settings unless you know what that entails. Use at your own risk!
+My personal development environment configuration.
 
-## Contents
+## What's Included
 
-- zsh config
-- tmux config
-- neovim config
-- git config
-- vscode config
+- **Neovim** - LazyVim-based setup with custom plugins
+- **Tmux** - Session management with plugins (resurrect, continuum, custom solarized theme)
+- **Zsh** - Shell configuration
+- **Git** - Global git configuration and ignore rules
+- **VS Code** - Editor settings and keybindings
+
+## Quick Setup
+
+```bash
+# Clone and symlink configs
+git clone https://github.com/yourusername/dotfiles-public.git ~/.dotfiles
+cd ~/.dotfiles
+
+# Symlink individual configs as needed or use stow to manage
+```
+
+**Note**: Use at your own risk. These are my personal preferences.

@@ -28,11 +28,16 @@ keymap.set("v", "<Leader>d", '"_d', { desc = "Do things without affecting the re
 keymap.set("v", "<Leader>D", '"_D', { desc = "Do things without affecting the registers" })
 
 -- Increment/Decrement numbers
-keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment
-keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
+-- keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment
+-- keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
+
+-- Disable LazyVim default for oil nvim
+vim.keymap.del("n", "<leader>-")
 
 -- Delete a word backwards
 keymap.set("n", "dw", 'vb"_d')
+
+keymap.set("n", "<leader>w", ":wa<CR>", { desc = "Save file" })
 
 -- Select all
 -- keymap.set("n", "<C-a>", "gg<S-v>G")
@@ -86,6 +91,6 @@ keymap.set("n", "<leader>r", function()
   require("anurag.hsl").replaceHexWithHSL()
 end, { desc = "Replace Hex with HSL" })
 
-keymap.set("n", "<leader>i", function()
-  require("anurag.lsp").toggleInlayHints()
-end, { desc = "Toggle Inlay Hints" })
+-- keymap.set("n", "<leader>i", function()
+--   require("anurag.lsp").toggleInlayHints()
+-- end, { desc = "Toggle Inlay Hints" })

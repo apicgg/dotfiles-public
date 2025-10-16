@@ -38,6 +38,7 @@ vim.opt.list = false -- make trailing spaces invisible
 vim.opt.pumblend = 0
 vim.opt.termguicolors = true
 vim.opt.background = "dark" -- colorschemes that can be light or dark will be made dark
+vim.opt.cursorline = true
 
 -- split windows
 vim.opt.splitright = true -- split vertical window to the right
@@ -77,6 +78,7 @@ vim.filetype.add({
 vim.g.lazyvim_prettier_needs_config = true
 vim.g.lazyvim_picker = "telescope"
 vim.g.lazyvim_cmp = "blink.cmp"
+-- vim.g.lazyvim_cmp = "nvim-cmp"
 
 -- Rounded border for diagnostic
 vim.diagnostic.config({

@@ -10,7 +10,7 @@ function M.toggleAutoformat()
 end
 
 -- Enable debug logs for the LSP client. Recommended for debugging only.
-vim.lsp.set_log_level("debug")
+-- vim.lsp.set_log_level("debug")
 
 -- typos-lsp
 vim.lsp.enable("typos_lsp")
