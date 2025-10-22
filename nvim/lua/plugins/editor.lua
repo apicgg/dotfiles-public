@@ -71,13 +71,13 @@ return {
         desc = "Find Plugin File",
       },
       {
-        "<leader>ff",
+        "<leader><leader>",
         function()
           local builtin = require("telescope.builtin")
           builtin.find_files({
             no_ignore = true,
             hidden = true,
-            file_ignore_patterns = { ".git", "node_modules", ".DS_Store" },
+            file_ignore_patterns = { ".git", "node_modules", ".DS_Store", "dist", "build", ".next" },
           })
         end,
         desc = "Lists files in your current working directory, respects .gitignore",
@@ -88,7 +88,7 @@ return {
           local builtin = require("telescope.builtin")
           builtin.live_grep({
             additional_args = { "--hidden" },
-            file_ignore_patterns = { ".git", "node_modules", ".DS_Store" },
+            file_ignore_patterns = { ".git", "node_modules", ".DS_Store", "dist", "build", ".next" },
           })
         end,
         desc = "Search for a string in your current working directory and get results live as you type, respects .gitignore",

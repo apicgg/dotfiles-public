@@ -8,6 +8,9 @@ return {
     lazy = false,
     config = function()
       require("oil").setup({
+        win_options = {
+          signcolumn = "yes:2",
+        },
         default_file_explorer = true, -- start up nvim with oil instead of netrw
         columns = {},
         keymaps = {
@@ -38,5 +41,13 @@ return {
         end,
       })
     end,
+  },
+
+  {
+    "refractalize/oil-git-status.nvim",
+    dependencies = {
+      "stevearc/oil.nvim",
+    },
+    config = true,
   },
 }

@@ -32,7 +32,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.yaml" },
     { import = "lazyvim.plugins.extras.lang.sql" },
     { import = "lazyvim.plugins.extras.lang.prisma" },
-    { import = "lazyvim.plugins.extras.lang.toml" },
+    -- { import = "lazyvim.plugins.extras.lang.toml" },
 
     -- Linting and formatting
     { import = "lazyvim.plugins.extras.linting.eslint" },
@@ -48,7 +48,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.editor.mini-files" },
     { import = "lazyvim.plugins.extras.editor.mini-move" },
     { import = "lazyvim.plugins.extras.editor.inc-rename" },
-    -- { import = "lazyvim.plugins.extras.editor.neo-tree" },
+    { import = "lazyvim.plugins.extras.editor.neo-tree" },
 
     -- Test and debug
     -- { import = "lazyvim.plugins.extras.dap.core" },
@@ -63,8 +63,8 @@ require("lazy").setup({
     -- Completion and AI
     -- { import = "lazyvim.plugins.extras.ai.copilot" },
     -- { import = "lazyvim.plugins.extras.ai.copilot-native" },
-    -- { import = "lazyvim.plugins.extras.ai.sidekick" },
-    { import = "lazyvim.plugins.extras.ai.copilot-chat" },
+    { import = "lazyvim.plugins.extras.ai.sidekick" },
+    -- { import = "lazyvim.plugins.extras.ai.copilot-chat" },
 
     { import = "plugins" },
   },

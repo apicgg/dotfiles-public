@@ -65,6 +65,7 @@ return {
     opts = {
       scroll = { enabled = false },
       picker = {
+        enabled = false,
         sources = {
           explorer = { hidden = true, ignored = true, exclude = { "**/.git", "**/.DS_Store" } },
         },
@@ -157,7 +158,6 @@ return {
     "folke/snacks.nvim",
     opts = {
       dashboard = {
-        enabled = false,
         preset = {
           header = [[
 ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗

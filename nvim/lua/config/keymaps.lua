@@ -38,6 +38,8 @@ vim.keymap.del("n", "<leader>-")
 keymap.set("n", "dw", 'vb"_d')
 
 keymap.set("n", "<leader>w", ":wa<CR>", { desc = "Save file" })
+keymap.set("n", "<leader>q", ":q<CR>", { desc = "Quit Neovim Window" })
+keymap.set("n", "<C-x>", ":bdelete<CR>", { desc = "Close buffer" })
 
 -- Select all
 -- keymap.set("n", "<C-a>", "gg<S-v>G")

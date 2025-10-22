@@ -39,6 +39,7 @@ vim.opt.pumblend = 0
 vim.opt.termguicolors = true
 vim.opt.background = "dark" -- colorschemes that can be light or dark will be made dark
 vim.opt.cursorline = true
+vim.opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 -- split windows
 vim.opt.splitright = true -- split vertical window to the right

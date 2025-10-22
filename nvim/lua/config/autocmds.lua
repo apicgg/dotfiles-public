@@ -12,3 +12,11 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt.conceallevel = 0
   end,
 })
+
+-- Fix comment string for gitconfig / gitmodules / etc.
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "gitconfig", "gitmodules" },
+  callback = function()
+    vim.bo.commentstring = "# %s"
+  end,
+})

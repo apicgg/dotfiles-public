@@ -27,6 +27,11 @@ return {
 
   {
     "folke/noice.nvim",
+    config = {
+      cmdline = {
+        view = "cmdline",
+      },
+    },
     opts = {
       presets = {
         lsp_doc_border = true,
