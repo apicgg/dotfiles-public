@@ -11,8 +11,7 @@
 	defaultBranch = main
 [core]
   excludesfile = ~/.gitignore_global
-  # editor = code --wait
-  editor = nvim
+  editor = code --wait
 [push]
   default = simple
 [github]
@@ -44,16 +43,3 @@
   l = log
   lg = log --graph --name-status --pretty=format:\"%C(red)%h %C(reset)(%cd) %C(green)%an %Creset%s %C(yellow)%d%Creset\" --date=relative
   fl = log --pretty=full --stat
-[diff]
-  tool = nvimdiff
-[difftool "nvimdiff"]
-	cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "nvimdiff"]
-	cmd = nvim -d \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true

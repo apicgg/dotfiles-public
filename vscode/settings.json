@@ -5,17 +5,15 @@
   "docker.extension.dockerEngineAvailabilityPrompt": false,
   // "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
-    // "source.organizeImports": "explicit"
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
   },
   "editor.cursorSurroundingLines": 10,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontSize": 16,
   "editor.formatOnSave": true,
   "editor.guides.bracketPairs": "active",
-  "editor.lineNumbers": "relative",
   "editor.linkedEditing": true,
-  "editor.minimap.enabled": false,
   "editor.quickSuggestions": {
     "strings": true
   },
@@ -41,10 +39,9 @@
     "plaintext": false,
     "scminput": false
   },
-  "projectManager.git.baseFolders": [
-    "$home/Developer"
-  ],
+  "projectManager.git.baseFolders": ["$home/Developer"],
   "projectManager.sortList": "Recent",
+  "redhat.telemetry.enabled": false,
   "terminal.integrated.fontSize": 15,
   "terminal.integrated.macOptionClickForcesSelection": true,
   "terminal.integrated.stickyScroll.enabled": false,
@@ -56,143 +53,28 @@
   "vim.incsearch": true,
   "vim.insertModeKeyBindings": [
     {
-      "after": [
-        "<Esc>"
-      ],
-      "before": [
-        "j",
-        "j"
-      ]
+      "after": ["<Esc>"],
+      "before": ["j", "j"]
     }
   ],
-  "vim.leader": "<space>",
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        "[",
-        "d"
-      ],
-      "commands": [
-        "editor.action.marker.prev"
-      ]
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prev"]
     },
     {
-      "before": [
-        "]",
-        "d"
-      ],
-      "commands": [
-        "editor.action.marker.next"
-      ]
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.next"]
     },
     {
-      "before": [
-        "K"
-      ],
-      "commands": [
-        "editor.action.showHover"
-      ]
-    },
-    {
-      "before": [
-        "leader",
-        "r"
-      ],
-      "commands": [
-        "editor.action.rename"
-      ]
-    },
-    {
-      "before": [
-        "leader",
-        "w"
-      ],
-      "commands": [
-        ":w!"
-      ]
-    },
-    {
-      "before": [
-        "<leader>",
-        "c",
-        "a"
-      ],
-      "commands": [
-        "editor.action.quickFix"
-      ]
-    },
-    {
-      "after": [
-        "\"",
-        "_",
-        "d"
-      ],
-      "before": [
-        "d"
-      ]
-    },
-    {
-      "after": [
-        "\"",
-        "_",
-        "D"
-      ],
-      "before": [
-        "D"
-      ]
-    },
-    {
-      "after": [
-        "\"",
-        "_",
-        "d",
-        "d"
-      ],
-      "before": [
-        "d",
-        "d"
-      ]
+      "before": ["K"],
+      "commands": ["editor.action.showHover"]
     }
   ],
   "vim.overrideCopy": false,
-  "vim.useSystemClipboard": true,
-  "vim.visualModeKeyBindingsNonRecursive": [
-    {
-      "after": [
-        "\"",
-        "_",
-        "d"
-      ],
-      "before": [
-        "d"
-      ]
-    },
-    {
-      "after": [
-        "\"",
-        "_",
-        "D"
-      ],
-      "before": [
-        "D"
-      ]
-    },
-    {
-      "after": [
-        "\"",
-        "_",
-        "d",
-        "d"
-      ],
-      "before": [
-        "d",
-        "d"
-      ]
-    }
-  ],
   "vsicons.dontShowNewVersionMessage": true,
   "window.confirmBeforeClose": "keyboardOnly",
-  "window.zoomLevel": 0.4,
+  "window.zoomLevel": 0.5,
   "workbench.externalBrowser": "chrome",
   "workbench.iconTheme": "vscode-icons",
   "workbench.layoutControl.enabled": false,
