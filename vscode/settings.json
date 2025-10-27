@@ -69,12 +69,40 @@
     {
       "before": ["K"],
       "commands": ["editor.action.showHover"]
+    },
+    {
+      "after": ["\"", "_", "d"],
+      "before": ["d"]
+    },
+    {
+      "after": ["\"", "_", "D"],
+      "before": ["D"]
+    },
+    {
+      "after": ["\"", "_", "d", "d"],
+      "before": ["d", "d"]
     }
   ],
   "vim.overrideCopy": false,
+  "vim.useSystemClipboard": true,
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "after": ["\"", "_", "d"],
+      "before": ["d"]
+    },
+    {
+      "after": ["\"", "_", "D"],
+      "before": ["D"]
+    },
+    {
+      "after": ["\"", "_", "d", "d"],
+      "before": ["d", "d"]
+    }
+  ],
   "vsicons.dontShowNewVersionMessage": true,
   "window.confirmBeforeClose": "keyboardOnly",
   "window.zoomLevel": 0.5,
+  "workbench.colorTheme": "Default Dark+",
   "workbench.externalBrowser": "chrome",
   "workbench.iconTheme": "vscode-icons",
   "workbench.layoutControl.enabled": false,
