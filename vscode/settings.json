@@ -1,24 +1,32 @@
 {
+  "[go]": {
+    "editor.defaultFormatter": "golang.go",
+    "editor.formatOnSave": true
+  },
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma"
   },
+  "chat.restoreLastPanelSession": true,
+  "chat.viewSessions.orientation": "stacked",
+  "claudeCode.preferredLocation": "panel",
   "docker.extension.dockerEngineAvailabilityPrompt": false,
-  // "editor.acceptSuggestionOnCommitCharacter": false,
+  "docker.extension.enableComposeLanguageServer": false,
+  "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "explicit"
+    "source.fixAll.eslint": "explicit"
+    // "source.organizeImports": "explicit"
   },
-  "editor.cursorSurroundingLines": 10,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontSize": 16,
+  "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
+  "editor.formatOnType": true,
   "editor.guides.bracketPairs": "active",
   "editor.linkedEditing": true,
   "editor.quickSuggestions": {
     "strings": true
   },
   "editor.smoothScrolling": true,
-  "editor.stickyScroll.enabled": false,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "editor.tabCompletion": "onlySnippets",
   "editor.tabSize": 2,
@@ -38,6 +46,9 @@
     "markdown": false,
     "plaintext": false,
     "scminput": false
+  },
+  "gopls": {
+    "ui.semanticTokens": true
   },
   "projectManager.git.baseFolders": ["$home/Developer"],
   "projectManager.sortList": "Recent",
@@ -102,7 +113,6 @@
   "vsicons.dontShowNewVersionMessage": true,
   "window.confirmBeforeClose": "keyboardOnly",
   "window.zoomLevel": 0.5,
-  "workbench.colorTheme": "Default Dark+",
   "workbench.externalBrowser": "chrome",
   "workbench.iconTheme": "vscode-icons",
   "workbench.layoutControl.enabled": false,
