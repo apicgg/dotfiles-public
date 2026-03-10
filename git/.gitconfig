@@ -1,5 +1,5 @@
 [user]
-  email = p.anurag@outlook.com
+	email = p.anurag@outlook.com
 	name = Anurag Pramanik
 [gpg]
 	program = /opt/homebrew/bin/gpg
@@ -11,7 +11,8 @@
 	defaultBranch = main
 [core]
   excludesfile = ~/.gitignore_global
-  editor = code --wait
+  # editor = code --wait
+  editor = vim
 [push]
   default = simple
 [github]
@@ -33,7 +34,6 @@
   ps = push
   pnb = "!git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)"
   pl = pull
-  pr = pull --rebase
   d = diff
   df = diff -b --color-words
   dfw = diff -w
