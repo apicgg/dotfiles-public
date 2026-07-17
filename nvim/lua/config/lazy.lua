@@ -28,10 +28,10 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.docker" },
     { import = "lazyvim.plugins.extras.lang.git" },
     { import = "lazyvim.plugins.extras.lang.markdown" },
-    { import = "lazyvim.plugins.extras.lang.tailwind" },
+    -- { import = "lazyvim.plugins.extras.lang.tailwind" },
     { import = "lazyvim.plugins.extras.lang.yaml" },
     { import = "lazyvim.plugins.extras.lang.sql" },
-    { import = "lazyvim.plugins.extras.lang.prisma" },
+    -- { import = "lazyvim.plugins.extras.lang.prisma" },
     -- { import = "lazyvim.plugins.extras.lang.toml" },
 
     -- Linting and formatting
@@ -42,11 +42,11 @@ require("lazy").setup({
 
     -- Editor enhancements
     { import = "lazyvim.plugins.extras.editor.telescope" },
-    { import = "lazyvim.plugins.extras.editor.refactoring" },
+    -- { import = "lazyvim.plugins.extras.editor.refactoring" },
     { import = "lazyvim.plugins.extras.coding.mini-comment" },
-    { import = "lazyvim.plugins.extras.coding.mini-surround" },
-    { import = "lazyvim.plugins.extras.editor.mini-files" },
-    { import = "lazyvim.plugins.extras.editor.mini-move" },
+    -- { import = "lazyvim.plugins.extras.coding.mini-surround" },
+    -- { import = "lazyvim.plugins.extras.editor.mini-files" },
+    -- { import = "lazyvim.plugins.extras.editor.mini-move" },
     { import = "lazyvim.plugins.extras.editor.inc-rename" },
     { import = "lazyvim.plugins.extras.editor.neo-tree" },
 
@@ -56,14 +56,14 @@ require("lazy").setup({
     -- { import = "lazyvim.plugins.extras.test.core" },
 
     -- Extra plugins
-    -- { import = "lazyvim.plugins.extras.util.dot" },
-    { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
+    { import = "lazyvim.plugins.extras.util.dot" },
+    -- { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
     -- { import = "lazyvim.plugins.extras.util.gitui" },
 
     -- Completion and AI
     -- { import = "lazyvim.plugins.extras.ai.copilot" },
     -- { import = "lazyvim.plugins.extras.ai.copilot-native" },
-    { import = "lazyvim.plugins.extras.ai.sidekick" },
+    -- { import = "lazyvim.plugins.extras.ai.sidekick" },
     -- { import = "lazyvim.plugins.extras.ai.copilot-chat" },
 
     { import = "plugins" },

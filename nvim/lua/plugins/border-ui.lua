@@ -28,9 +28,9 @@ return {
   {
     "folke/noice.nvim",
     config = {
-      cmdline = {
-        view = "cmdline",
-      },
+      -- cmdline = {
+      --   view = "cmdline",
+      -- },
     },
     opts = {
       presets = {
